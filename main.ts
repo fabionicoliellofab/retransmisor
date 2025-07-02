@@ -1,5 +1,7 @@
 radio.onReceivedValue(function (name, value) {
     OLED.writeStringNewLine("RECIBIENDO")
+    OLED.writeStringNewLine(name)
+    OLED.writeNumNewLine(value)
     if (name == "Presion") {
         radio.sendString(name)
         radio.sendNumber(value)
