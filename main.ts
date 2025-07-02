@@ -1,15 +1,15 @@
 radio.onReceivedValue(function (name, value) {
     OLED.writeStringNewLine("RECIBIENDO")
     if (name == "Presion") {
-        radio.sendString("Presion")
+        radio.sendString(name)
         radio.sendNumber(value)
     } else {
         if (name == "Temp") {
-            radio.sendString("Temp")
+            radio.sendString(name)
             radio.sendNumber(value)
         } else {
             if (name == "Humedad") {
-                radio.sendString("Humedad")
+                radio.sendString(name)
                 radio.sendNumber(value)
             }
         }
